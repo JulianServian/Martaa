@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dedicatoria - Fresas & Sanrio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍓</text></svg>">
+  <style>
+    :root{
+      --bg1: #fff6fb;
+      --bg2: #fff0f7;
+      --accent: #ff6b9a;
+      --soft: #ffddee;
+      --text: #3b2b2b;
+      --card: rgba(255,255,255,0.8);
+      --shadow: 0 10px 30px rgba(107,35,65,0.12);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg1),var(--bg2)); color:var(--text);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px;
+    }
+    .tarjeta{
+      width:100%; max-width:940px; background:var(--card); border-radius:22px; padding:28px; box-shadow:var(--shadow);
+      display:grid; grid-template-columns: 1fr 360px; gap:20px; align-items:center;
+    }
+    @media (max-width:880px){ .tarjeta{ grid-template-columns:1fr; } }
+
+    /* Cabecera */
+    .lado-izq{padding:8px}
+    h1{font-size:34px; margin:6px 0 8px; letter-spacing:-0.5px}
+    .sub{color:#7b5b6b; margin-bottom:14px}
+
+    /* Tarjeta derecha con ilustración simple */
+    .lado-der{display:flex; flex-direction:column; align-items:center; justify-content:center;}
+    .ilustracion{
+      width:300px; height:300px; border-radius:18px; background:linear-gradient(180deg,#fff,#ffeef6); display:flex; align-items:center; justify-content:center; position:relative; box-shadow:0 8px 24px rgba(255,105,150,0.14);
+    }
+    .ilustracion .kitty{font-size:110px}
+    .ilustracion .fresa{position:absolute; bottom:10px; right:12px; font-size:48px; transform:rotate(-12deg)}
+
+    /* Texto dedicado */
+    .dedicatoria{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4)); padding:16px; border-radius:12px}
+    p{line-height:1.5; margin:10px 0}
+    .cita{font-style:italic; color:#7a4760; font-weight:600}
+
+    /* Botones y acciones */
+    .acciones{display:flex; gap:12px; margin-top:14px}
+    .btn{padding:10px 14px; border-radius:12px; border:0; cursor:pointer; font-weight:600; box-shadow:0 6px 18px rgba(107,35,65,0.08)}
+    .btn-rosa{background:linear-gradient(90deg,#ff7aa3,#ff5f8f); color:white}
+    .btn-suave{background:transparent; color:var(--accent); border:2px solid rgba(255,107,154,0.12)}
+
+    /* Footer */
+    footer{margin-top:18px; font-size:13px; color:#8c6278; display:flex; justify-content:space-between; align-items:center}
+
+    /* Estrellas, fresas flotantes */
+    .sparkles{position:absolute; inset:0; pointer-events:none}
+    .strawberry{
+      position:absolute; font-size:22px; transform-origin:center; animation:floating 6s ease-in-out infinite;
+    }
+    .s1{left:8%; top:12%; animation-delay:-1s}
+    .s2{left:72%; top:6%; animation-delay:-2s}
+    .s3{left:52%; top:40%; animation-delay:-3s}
+    .s4{left:26%; top:68%; animation-delay:-4s}
+    @keyframes floating{ 0%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-12px) rotate(6deg)} 100%{transform:translateY(0) rotate(0)} }
+
+    /* Tarjeta de mensaje pequeño */
+    .mini-card{background:var(--soft); padding:10px 12px; border-radius:10px; display:inline-block}
+
+  </style>
+</head>
+<body>
+  <div class="tarjeta" role="main">
+    <div class="lado-izq">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="font-size:34px">🍓</div>
+        <div>
+          <div style="font-size:12px;color:#ad7d97;">22 de septiembre, 2025</div>
+          <h1>Para una persona especial, amante de las fresas y de Sanrio jiji</h1>
+          <div class="sub">Te acabo de conocer hoy, y ya me inspiras a escribir cosas bonitas.</div>
+        </div>
+      </div>
+
+      <div class="dedicatoria" aria-live="polite">
+        <p class="cita">"Hay personas que entran en la vida como quien encuentra una fresa perfecta: dulce, inesperada y tan bonita que dan ganas de sonreír."</p>
+        
+        <p>Hola — quizás hoy todo comenzó con un saludo en tiktok JAJAJ; aun así, quiero hacerte esto. Me lo pediste de fresas, y el universo de Sanrio (Hello Kitty, My Melody, Cinnamoroll...) probablemente esto te hace sonreír: dos cosas que son dulces y amables, igual que la forma en que espero conocerte poco a poco.</p>
+
+        <p>Quise hacerte este pequeño detalle para que lo tengas como recuerdo: un rincón rosado donde las fresas y los personajes de Sanrio se mezclan con palabras sinceras. Espero que te saque una sonrisa y te recuerde que lo simple también es precioso.</p>
+
+        <div class="mini-card">PD: Si quieres que lo personalice con tu nombre, dime y lo edito para ti ✨</div>
+
+        <div class="acciones">
+          <button class="btn btn-rosa" id="corazonBtn">Enviar un ❤️</button>
+          <button class="btn btn-suave" id="descargarBtn">Descargar imagen</button>
+        </div>
+      </div>
+
+      <footer>
+        <div>Una dedicatoria sencilla y cariñosa.</div>
+        <div style="text-align:right;">Hecho por Juliann</div>
+      </footer>
+
+    </div>
+
+    <div class="lado-der">
+      <div class="ilustracion" id="canvasCard">
+  <!-- Fanart Sanrio PNGs -->
+  <img src="https://images.steamusercontent.com/ugc/1772698127133401839/FD9C8F12EBFC9869649457F4CFACEAFD49633C73/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Hello Kitty" style="position:absolute; left:18px; top:18px; width:90px; opacity:0.85; pointer-events:none; filter:drop-shadow(0 2px 8px #ffb6d5);">
+  <img src="https://images6.alphacoders.com/137/thumb-1920-1374318.png" alt="My Melody" style="position:absolute; right:18px; top:38px; width:80px; opacity:0.85; pointer-events:none; filter:drop-shadow(0 2px 8px #ffd6e7);">
+  <img src="https://i.pinimg.com/736x/7e/08/9a/7e089ac5bbb5231398b3dfa522c9aea9.jpg" alt="Cinnamoroll" style="position:absolute; left:50%; bottom:18px; width:82px; opacity:0.85; transform:translateX(-50%); pointer-events:none; filter:drop-shadow(0 2px 8px #e0eaff);">
+        <div class="kitty">㋡</div>
+        <div class="fresa">🍓</div>
+        <div class="sparkles">
+          <div class="strawberry s1">🍓</div>
+          <div class="strawberry s2">🍓</div>
+          <div class="strawberry s3">🍓</div>
+          <div class="strawberry s4">🍓</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px; text-align:center; color:#6b4258">Hello Kitty, My Melody y Cinnamoroll envían abrazos imaginarios 💌</div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript sencillo para interacción
+    const corazonBtn = document.getElementById('corazonBtn');
+    const descargarBtn = document.getElementById('descargarBtn');
+
+    corazonBtn.addEventListener('click', () => {
+      // Pequeña animación de corazón
+      const heart = document.createElement('div');
+      heart.textContent = '❤️';
+      heart.style.position = 'fixed';
+      heart.style.left = (50 + (Math.random()*20-10)) + '%';
+      heart.style.top = '60%';
+      heart.style.fontSize = '34px';
+      heart.style.transform = 'translate(-50%, -50%) scale(1)';
+      heart.style.transition = 'transform 800ms cubic-bezier(.2,.8,.2,1), opacity 800ms';
+      document.body.appendChild(heart);
+      requestAnimationFrame(()=>{
+        heart.style.transform = 'translate(-50%, -180%) scale(1.6)';
+        heart.style.opacity = '0';
+      });
+      setTimeout(()=> heart.remove(),900);
+    });
+
+    descargarBtn.addEventListener('click', () => {
+      alert('Para descargar, toma una captura de pantalla de la tarjeta o abre este archivo en un navegador y usa "Imprimir -> Guardar como PDF".');
+    });
+  </script>
+</body>
+</html>
